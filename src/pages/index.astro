@@ -13,12 +13,17 @@ import Especificaciones from "../components/Especificaciones.astro";
 
 <Layout title="GAC Aion Y">
   <main class="mx-auto max-w-screen-xl px-4 poppins-regular">
-    <section class="grid grid-cols-3 my-16 gap-16">
+    <section
+      class="grid grid-cols-1 xl:grid-cols-3 my-8 xl:my-16 gap-y-8 xl:gap-16"
+    >
       <div>
-        <img src="/img/sobre.png" alt="foto" />
+        <img src="/img/sobre-m.png" alt="foto" class="xl:hidden" />
+        <img src="/img/sobre.png" alt="foto" class="hidden xl:block" />
       </div>
       <div class="col-span-2" id="general">
-        <h1 class="poppins-bold uppercase text-6xl">Sobre el GAC Aion Y</h1>
+        <h1 class="poppins-bold uppercase text-3xl xl:text-6xl">
+          Sobre el GAC Aion Y
+        </h1>
         <p class="my-8">
           El GAC Aion Y es un SUV 100% eléctrico que destaca por su diseño
           futurista y su enfoque en la movilidad sostenible. Este modelo
@@ -52,10 +57,10 @@ import Especificaciones from "../components/Especificaciones.astro";
 
     <Especificaciones />
 
-    <section class="grid grid-cols-3 gap-16 my-16" id="precios">
+    <section class="grid xl:grid-cols-3 gap-16 my-8 xl:my-16" id="precios">
       <img src="/img/precios-izq.png" alt="foto" />
       <div class="col-span-2" id="precios">
-        <h2 class="poppins-bold uppercase text-6xl">
+        <h2 class="poppins-bold uppercase text-3xl xl:text-6xl">
           Precios y financiamiento
         </h2>
         <div class="mt-10">

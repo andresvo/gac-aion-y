@@ -43,7 +43,9 @@
     top: 47%;
   }
   .leftSwiper .swiper-button-next {
-    left: 488px;
+    @media (min-width: 1280px) {
+      left: 488px;
+    }
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
@@ -71,7 +73,9 @@
       top: 40%;
     }
     .swiper-button-prev {
-      right: 488px;
+      @media (min-width: 1280px) {
+        right: 488px;
+      }
       left: auto;
     }
     &.swiper-horizontal > .swiper-pagination-bullets {
