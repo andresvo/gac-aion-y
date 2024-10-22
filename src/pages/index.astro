@@ -8,6 +8,7 @@ import ColoresExterior from "../components/ColoresExterior.astro";
 import ColoresInterior from "../components/ColoresInterior.astro";
 import Equipamiento from "../components/Equipamiento.astro";
 import Seguridad from "../components/Seguridad.astro";
+import Especificaciones from "../components/Especificaciones.astro";
 ---
 
 <Layout title="GAC Aion Y">
@@ -16,7 +17,7 @@ import Seguridad from "../components/Seguridad.astro";
       <div>
         <img src="/img/sobre.png" alt="foto" />
       </div>
-      <div class="col-span-2">
+      <div class="col-span-2" id="general">
         <h1 class="poppins-bold uppercase text-6xl">Sobre el GAC Aion Y</h1>
         <p class="my-8">
           El GAC Aion Y es un SUV 100% eléctrico que destaca por su diseño
@@ -49,8 +50,53 @@ import Seguridad from "../components/Seguridad.astro";
 
     <Seguridad />
 
+    <Especificaciones />
+
+    <section class="grid grid-cols-3 gap-16 my-16" id="precios">
+      <img src="/img/precios-izq.png" alt="foto" />
+      <div class="col-span-2" id="precios">
+        <h2 class="poppins-bold uppercase text-6xl">
+          Precios y financiamiento
+        </h2>
+        <div class="mt-10">
+          <h3
+            class="pt-1 pb-3 pl-6 bg-black text-white poppins-bold text-2xl rounded-tr-xl tab relative"
+          >
+            GAC AION Y
+          </h3>
+          <table class="precios">
+            <thead>
+              <tr>
+                <th colspan="2"
+                  ><span class="text-2xl align-middle mr-1">$</span> Valores generales</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Precio lista</td>
+                <td class="text-right">$ 30.990.000</td>
+              </tr>
+              <tr>
+                <td>Bono GAC todo medio de pago</td>
+                <td class="text-right">$ 500.000</td>
+              </tr>
+              <tr>
+                <td>Bono crédito Santander Consumer</td>
+                <td class="text-right">$ 500.000</td>
+              </tr>
+              <tr>
+                <td class="bg-black text-white">Precio final con bonos</td>
+                <td class="text-right bg-black text-white">$ 29.990.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section
-      class="grid grid-cols-7 my-20 bg-[url('/img/fondo-cta.jpg')] bg-contain bg-no-repeat aspect-[1440/500]"
+      class="grid grid-cols-7 mb-20 bg-[url('/img/fondo-cta.jpg')] bg-contain bg-no-repeat aspect-[1440/500]"
     >
       <div class="col-span-4"></div>
       <div
@@ -75,4 +121,64 @@ import Seguridad from "../components/Seguridad.astro";
     </section>
   </main>
   <Swiper />
+  <script is:inline>
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+
+  <style lang="scss">
+    table.precios {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        background-color: #f6f6f6;
+        border: 1px solid #dbdbdb;
+        text-align: left;
+        padding: 0.6rem 1rem 0.6rem 1.5rem;
+      }
+      td {
+        padding: 0.9rem;
+        padding-left: 3rem;
+        border-top: 1px solid #dbdbdb;
+        &:first-child {
+          border-left: 1px solid #dbdbdb;
+        }
+        &:last-child {
+          border-right: 1px solid #dbdbdb;
+        }
+      }
+    }
+
+    .tab::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      width: 180px;
+      height: 20px;
+      background-color: black;
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+    }
+
+    .tab::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 164px;
+      width: 20px;
+      height: 30px;
+      background-color: black;
+      border-top-right-radius: 0.75rem;
+      transform: rotate(-45deg);
+    }
+  </style>
 </Layout>
