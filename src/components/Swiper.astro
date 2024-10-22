@@ -1,0 +1,63 @@
+<!-- Swiper JS -->
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script is:inline>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+
+<style is:global>
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 38px;
+    height: 38px;
+    top: 47%;
+  }
+  .leftSwiper .swiper-button-next {
+    left: 488px;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    content: "";
+    background-image: url("/img/flecha-izq.svg");
+    display: block;
+    width: 38px;
+    height: 38px;
+  }
+  .swiper-button-next:after {
+    background-image: url("/img/flecha-der.svg");
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 56px;
+    width: 534px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #ffffff;
+  }
+
+  /* Right swiper */
+  .rightSwiper .swiper-button-next,
+  .rightSwiper .swiper-button-prev {
+    top: 40%;
+  }
+  .rightSwiper .swiper-button-prev {
+    right: 488px;
+    left: auto;
+  }
+  .rightSwiper.swiper-horizontal > .swiper-pagination-bullets {
+    right: 0;
+    left: auto;
+    bottom: 103px;
+  }
+</style>

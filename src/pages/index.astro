@@ -1,120 +1,152 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Atributos from "../components/Atributos.astro";
+import Interior from "../components/Interior.astro";
+import Exterior from "../components/Exterior.astro";
+import Swiper from "../components/Swiper.astro";
 ---
 
 <Layout title="GAC Aion Y">
-	<main class="mx-auto max-w-screen-xl px-4 poppins-regular">
-		<section class="grid grid-cols-3 my-16 gap-16">
-			<div>
-				<img src="/img/sobre.png" alt="foto">
-			</div>
-			<div class="col-span-2">
-				<h1 class="poppins-bold uppercase text-6xl">Sobre el GAC Aion Y</h1>
-				<p class="my-8">El GAC Aion Y es un SUV 100% eléctrico que destaca por su diseño futurista y su enfoque en la movilidad sostenible. Este modelo compacto ofrece tecnología avanzada y una conducción segura y eficiente, con una autonomía de hasta 490 km, ideal tanto para la ciudad como para viajes largos.</p>
-				<p class="my-8">Además, el GAC Aion Y se distingue por su amplio espacio interior y comodidad. Incluye características tecnológicas de punta, como una batería segura, cuatro modos de conducción, aparcamiento panorámico 360 HD, techo panorámico, y una pantalla touch de 14,6” con sistema de infoentretenimiento.</p>
-			</div>
-		</section>
+  <main class="mx-auto max-w-screen-xl px-4 poppins-regular">
+    <section class="grid grid-cols-3 my-16 gap-16">
+      <div>
+        <img src="/img/sobre.png" alt="foto" />
+      </div>
+      <div class="col-span-2">
+        <h1 class="poppins-bold uppercase text-6xl">Sobre el GAC Aion Y</h1>
+        <p class="my-8">
+          El GAC Aion Y es un SUV 100% eléctrico que destaca por su diseño
+          futurista y su enfoque en la movilidad sostenible. Este modelo
+          compacto ofrece tecnología avanzada y una conducción segura y
+          eficiente, con una autonomía de hasta 490 km, ideal tanto para la
+          ciudad como para viajes largos.
+        </p>
+        <p class="my-8">
+          Además, el GAC Aion Y se distingue por su amplio espacio interior y
+          comodidad. Incluye características tecnológicas de punta, como una
+          batería segura, cuatro modos de conducción, aparcamiento panorámico
+          360 HD, techo panorámico, y una pantalla touch de 14,6” con sistema de
+          infoentretenimiento.
+        </p>
+      </div>
+    </section>
 
-		<section class="grid grid-cols-7 my-16">
-			<div class="col-span-3">
-				<img src="/img/atrib1.png" alt="foto">
-			</div>
-			<div class="col-span-4">
-				<h2 class="poppins-bold uppercase text-6xl pl-20">ATRIBUTOS</h2>
-				<p class="my-8 bg-[url('/img/fondo-der.svg')] bg-contain bg-no-repeat py-10 px-20">Diseño frontal con aspecto tecnológico y futurista. Su carrocería aerodinámica reduce la resistencia al viento, mejorando la eficiencia energética. Sus líneas laterales son sencillas y suaves, contando con molduras en llantas y puertas en colores que contrastan y resaltan su diseño dándole una personalidad única.</p>
-			</div>
-		</section>
+    <Atributos />
 
-		<section class="grid grid-cols-7 my-16">
-			<div class="col-span-4">
-				<h2 class="poppins-bold uppercase text-6xl pl-20">INTERIOR</h2>
-				<p class="my-8 bg-[url('/img/fondo-izq.svg')] bg-contain bg-no-repeat py-10 px-20">Espacio interior increíblemente amplio que garantiza comodidad en cada trayecto. Su disposición de asientos flexible permite adaptar el interior a distintas necesidades, con configuraciones que van desde el modo estándar hasta el modo campamento. Esta versatilidad asegura el máximo confort, haciendo que cada viaje sea más placentero y funcional.</p>
-			</div>
-			<div class="col-span-3">
-				<img src="/img/interior1.png" alt="foto">
-			</div>
-		</section>
+    <Interior />
 
-		<section class="grid grid-cols-7 my-16">
-			<div class="col-span-3">
-				<img src="/img/atrib1.png" alt="foto">
-			</div>
-			<div class="col-span-4">
-				<h2 class="poppins-bold uppercase text-6xl pl-20">EXTERIOR</h2>
-				<p class="my-8 bg-[url('/img/fondo-der.svg')] bg-contain bg-no-repeat py-4 px-20">Faros LED completos de alas de ángel que destacan no solo por su estilo moderno y llamativo, sino también por su funcionalidad, menor consumo y durabilidad. Ofrecen una iluminación potente con un total de 102 LEDs. Son brillantes y de largo alcance, mejorando la seguridad en la conducción nocturna. Este faro es suministrado por el mismo proveedor que Audi y BMW, garantizando su enorme calidad.</p>
-			</div>
-		</section>
+    <Exterior />
 
-		<section class="bg-[url('/img/fondo-colores-ext.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]">
-			<h2 class="poppins-bold uppercase text-6xl">Colores exterior</h2>
-			<div>
-				<img src="/img/color-ext1.png" class="mx-auto max-w-[820px]" alt="color">
-			</div>
-			<div class="flex gap-4 justify-center">
-				<img src="/img/color1.svg" alt="color1">
-				<img src="/img/color2.svg" alt="color2">
-				<img src="/img/color3.svg" alt="color3">
-				<img src="/img/color4.svg" alt="color4">
-				<img src="/img/color5.svg" alt="color5">
-				<img src="/img/color6.svg" alt="color6">
-				<img src="/img/color7.svg" alt="color7">
-			</div>
-		</section>
+    <section
+      class="bg-[url('/img/fondo-colores-ext.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]"
+    >
+      <h2 class="poppins-bold uppercase text-6xl">Colores exterior</h2>
+      <div>
+        <img
+          src="/img/color-ext1.png"
+          class="mx-auto max-w-[820px]"
+          alt="color"
+        />
+      </div>
+      <div class="flex gap-4 justify-center">
+        <img src="/img/color1.svg" alt="color1" />
+        <img src="/img/color2.svg" alt="color2" />
+        <img src="/img/color3.svg" alt="color3" />
+        <img src="/img/color4.svg" alt="color4" />
+        <img src="/img/color5.svg" alt="color5" />
+        <img src="/img/color6.svg" alt="color6" />
+        <img src="/img/color7.svg" alt="color7" />
+      </div>
+    </section>
 
-		<section class="bg-[url('/img/fondo-colores-int.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]">
-			<h2 class="poppins-bold uppercase text-6xl text-right">Colores interior</h2>
-			<div>
-				<img src="/img/color-int1.png" alt="color" class="-mt-12">
-			</div>
-			<div class="flex gap-4 justify-center mt-4">
-				<img src="/img/color1.svg" alt="color1">
-				<img src="/img/color2.svg" alt="color2">
-				<img src="/img/color3.svg" alt="color3">
-				<img src="/img/color4.svg" alt="color4">
-				<img src="/img/color5.svg" alt="color5">
-				<img src="/img/color6.svg" alt="color6">
-				<img src="/img/color7.svg" alt="color7">
-			</div>
-		</section>
+    <section
+      class="bg-[url('/img/fondo-colores-int.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]"
+    >
+      <h2 class="poppins-bold uppercase text-6xl text-right">
+        Colores interior
+      </h2>
+      <div>
+        <img src="/img/color-int1.png" alt="color" class="-mt-12" />
+      </div>
+      <div class="flex gap-4 justify-center mt-4">
+        <img src="/img/color1.svg" alt="color1" />
+        <img src="/img/color2.svg" alt="color2" />
+        <img src="/img/color3.svg" alt="color3" />
+        <img src="/img/color4.svg" alt="color4" />
+        <img src="/img/color5.svg" alt="color5" />
+        <img src="/img/color6.svg" alt="color6" />
+        <img src="/img/color7.svg" alt="color7" />
+      </div>
+    </section>
 
-		<section class="my-16 bg-[url('/img/fondo-equip.svg')] bg-contain bg-no-repeat aspect-[1440/621]">
-			<h2 class="col-span-7 poppins-bold uppercase text-6xl text-right">EQUIPAMIENTO Y TECNOLOGÍA</h2>
-			<div class="grid grid-cols-7 gap-16 mt-16 px-8">
-				<div class="col-span-3">
-					<img src="/img/equip1.png" alt="foto">
-				</div>
-				<div class="col-span-4 flex items-center">
-					<p class="my-8">El All New GAC Aion Y llega para redefinir la movilidad eléctrica. Su completo equipamiento y sus avanzadas tecnologías, te invitan a vivir una nueva era en el camino para que cada viaje se transforme en una experiencia única.</p>
-				</div>
-			</div>
-		</section>
+    <section
+      class="my-16 bg-[url('/img/fondo-equip.svg')] bg-contain bg-no-repeat aspect-[1440/621]"
+    >
+      <h2 class="col-span-7 poppins-bold uppercase text-6xl text-right">
+        EQUIPAMIENTO Y TECNOLOGÍA
+      </h2>
+      <div class="grid grid-cols-7 gap-16 mt-16 px-8">
+        <div class="col-span-3">
+          <img src="/img/equip1.png" alt="foto" />
+        </div>
+        <div class="col-span-4 flex items-center">
+          <p class="my-8">
+            El All New GAC Aion Y llega para redefinir la movilidad eléctrica.
+            Su completo equipamiento y sus avanzadas tecnologías, te invitan a
+            vivir una nueva era en el camino para que cada viaje se transforme
+            en una experiencia única.
+          </p>
+        </div>
+      </div>
+    </section>
 
-		<section class="my-16 bg-[url('/img/fondo-seg.svg')] bg-contain bg-no-repeat aspect-[1440/621]">
-			<h2 class="poppins-bold uppercase text-6xl">Seguridad</h2>
-			<div class="grid grid-cols-7 gap-16 mt-16 px-8">
-				<div class="col-span-4 flex items-center">
-					<p class="my-8">El All New GAC Aion Y eleva los estándares de seguridad con una combinación de tecnología avanzada y sistemas de protección innovadores. Equipado con airbags frontales, laterales y de cortina, además del Programa Electrónico de Estabilidad (ESP) y frenos antibloqueo (ABS), este modelo garantiza máxima protección en cada trayecto. Su sistema de cámara de 360° HD y los sensores de estacionamiento traseros aseguran una experiencia de conducción segura y sin puntos ciegos en cualquier entorno.</p>
-				</div>
-				<div class="col-span-3">
-					<img src="/img/seg1.png" alt="foto">
-				</div>
-			</div>
-		</section>
+    <section
+      class="my-16 bg-[url('/img/fondo-seg.svg')] bg-contain bg-no-repeat aspect-[1440/621]"
+    >
+      <h2 class="poppins-bold uppercase text-6xl">Seguridad</h2>
+      <div class="grid grid-cols-7 gap-16 mt-16 px-8">
+        <div class="col-span-4 flex items-center">
+          <p class="my-8">
+            El All New GAC Aion Y eleva los estándares de seguridad con una
+            combinación de tecnología avanzada y sistemas de protección
+            innovadores. Equipado con airbags frontales, laterales y de cortina,
+            además del Programa Electrónico de Estabilidad (ESP) y frenos
+            antibloqueo (ABS), este modelo garantiza máxima protección en cada
+            trayecto. Su sistema de cámara de 360° HD y los sensores de
+            estacionamiento traseros aseguran una experiencia de conducción
+            segura y sin puntos ciegos en cualquier entorno.
+          </p>
+        </div>
+        <div class="col-span-3">
+          <img src="/img/seg1.png" alt="foto" />
+        </div>
+      </div>
+    </section>
 
-		<section class="grid grid-cols-7 my-20">
-			<div class="col-span-4">
-				<img src="/img/fondo-cta.jpg" alt="foto">
-			</div>
-			<div class="col-span-3 flex flex-col items-center justify-center gap-4 py-8">
-				<img src="/img/logo-modelo.svg" alt="All New Aion Y">
-				<div>
-					<p class="poppins-medium text-lg">Precio desde:</p>
-					<p class="poppins-extrabold uppercase text-3xl">$ 29.990.000</p>
-				</div>
-				<a href="#" class="block border border-neutral-400 rounded-full px-8 py-2 uppercase poppins-medium">Descargar ficha técnica</a>
-				<a href="#" class="block bg-rojo text-white rounded-full px-8 py-2 uppercase  poppins-medium">Cotizar</a>
-			</div>
-		</section>
-	</main>
+    <section
+      class="grid grid-cols-7 my-20 bg-[url('/img/fondo-cta.jpg')] bg-contain bg-no-repeat aspect-[1440/500]"
+    >
+      <div class="col-span-4"></div>
+      <div
+        class="col-span-3 flex flex-col items-center justify-center gap-4 py-8"
+      >
+        <img src="/img/logo-modelo.svg" alt="All New Aion Y" />
+        <div>
+          <p class="poppins-medium text-lg">Precio desde:</p>
+          <p class="poppins-extrabold uppercase text-3xl">$ 29.990.000</p>
+        </div>
+        <a
+          href="#"
+          class="block border border-neutral-400 rounded-full px-8 py-2 uppercase poppins-medium"
+          >Descargar ficha técnica</a
+        >
+        <a
+          href="#"
+          class="block bg-rojo text-white rounded-full px-8 py-2 uppercase poppins-medium"
+          >Cotizar</a
+        >
+      </div>
+    </section>
+  </main>
+  <Swiper />
 </Layout>
