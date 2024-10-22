@@ -12,7 +12,7 @@ import Especificaciones from "../components/Especificaciones.astro";
 ---
 
 <Layout title="GAC Aion Y">
-  <main class="mx-auto max-w-screen-xl px-4 poppins-regular">
+  <main class="mx-auto max-w-lg xl:max-w-screen-xl px-4 poppins-regular">
     <section
       class="grid grid-cols-1 xl:grid-cols-3 my-8 xl:my-16 gap-y-8 xl:gap-16"
     >
@@ -58,7 +58,7 @@ import Especificaciones from "../components/Especificaciones.astro";
     <Especificaciones />
 
     <section class="grid xl:grid-cols-3 gap-16 my-8 xl:my-16" id="precios">
-      <img src="/img/precios-izq.png" alt="foto" />
+      <img src="/img/precios-izq.png" alt="foto" class="hidden xl:block" />
       <div class="col-span-2" id="precios">
         <h2 class="poppins-bold uppercase text-3xl xl:text-6xl">
           Precios y financiamiento
@@ -101,25 +101,29 @@ import Especificaciones from "../components/Especificaciones.astro";
     </section>
 
     <section
-      class="grid grid-cols-7 mb-20 bg-[url('/img/fondo-cta.jpg')] bg-contain bg-no-repeat aspect-[1440/500]"
+      class="grid grid-cols-7 mb-20 bg-[#f5f5f5] bg-[url('/img/fondo-cta-m.jpg')] xl:bg-[url('/img/fondo-cta.jpg')] bg-cover bg-[center_right_1.5rem] xl:bg-contain bg-no-repeat xl:aspect-[1440/500]"
     >
-      <div class="col-span-4"></div>
+      <div class="col-span-3 xl:col-span-4"></div>
       <div
-        class="col-span-3 flex flex-col items-center justify-center gap-4 py-8"
+        class="col-span-4 xl:col-span-3 flex flex-col items-center justify-center gap-1 xl:gap-4 py-1 xl:py-8"
       >
-        <img src="/img/logo-modelo.svg" alt="All New Aion Y" />
+        <img
+          src="/img/logo-modelo.svg"
+          alt="All New Aion Y"
+          class="max-w-32 xl:max-w-full"
+        />
         <div>
-          <p class="poppins-medium text-lg">Precio desde:</p>
-          <p class="poppins-extrabold uppercase text-3xl">$ 29.990.000</p>
+          <p class="poppins-medium xl:text-lg">Precio desde:</p>
+          <p class="poppins-extrabold uppercase xl:text-3xl">$ 29.990.000</p>
         </div>
         <a
           href="http://gacmotor.cl/content/uploads/ft-aion-y.pdf"
-          class="block border border-neutral-400 rounded-full px-8 py-2 uppercase poppins-medium"
+          class="block border border-neutral-400 rounded-full px-2 xl:px-8 py-2 uppercase poppins-medium text-xs xl:text-base text-center"
           >Descargar ficha técnica</a
         >
         <a
           href="#"
-          class="block bg-rojo text-white rounded-full px-8 py-2 uppercase poppins-medium"
+          class="block bg-rojo text-white rounded-full px-8 py-2 uppercase poppins-medium text-xs xl:text-base"
           >Cotizar</a
         >
       </div>
@@ -150,14 +154,18 @@ import Especificaciones from "../components/Especificaciones.astro";
         padding: 0.6rem 1rem 0.6rem 1.5rem;
       }
       td {
-        padding: 0.9rem;
-        padding-left: 3rem;
         border-top: 1px solid #dbdbdb;
+        padding: 0.5rem;
+        @media (min-width: 1280px) {
+          padding: 0.9rem;
+          padding-left: 3rem;
+        }
         &:first-child {
           border-left: 1px solid #dbdbdb;
         }
         &:last-child {
           border-right: 1px solid #dbdbdb;
+          white-space: nowrap;
         }
       }
     }
