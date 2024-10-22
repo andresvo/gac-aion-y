@@ -15,6 +15,24 @@
       el: ".swiper-pagination",
     },
   });
+
+  // Color exterior
+  const extSwiper = new Swiper(".extSwiper", {
+    effect: "fade",
+  });
+
+  function changeColor(index) {
+    extSwiper.slideTo(index);
+  }
+
+  // Color interior
+  const intSwiper = new Swiper(".intSwiper", {
+    effect: "fade",
+  });
+
+  function changeColorInt(index) {
+    intSwiper.slideTo(index);
+  }
 </script>
 
 <style is:global>

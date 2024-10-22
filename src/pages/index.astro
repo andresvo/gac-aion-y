@@ -4,6 +4,8 @@ import Atributos from "../components/Atributos.astro";
 import Interior from "../components/Interior.astro";
 import Exterior from "../components/Exterior.astro";
 import Swiper from "../components/Swiper.astro";
+import ColoresExterior from "../components/ColoresExterior.astro";
+import ColoresInterior from "../components/ColoresInterior.astro";
 ---
 
 <Layout title="GAC Aion Y">
@@ -37,47 +39,9 @@ import Swiper from "../components/Swiper.astro";
 
     <Exterior />
 
-    <section
-      class="bg-[url('/img/fondo-colores-ext.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]"
-    >
-      <h2 class="poppins-bold uppercase text-6xl">Colores exterior</h2>
-      <div>
-        <img
-          src="/img/color-ext1.png"
-          class="mx-auto max-w-[820px]"
-          alt="color"
-        />
-      </div>
-      <div class="flex gap-4 justify-center">
-        <img src="/img/color1.svg" alt="color1" />
-        <img src="/img/color2.svg" alt="color2" />
-        <img src="/img/color3.svg" alt="color3" />
-        <img src="/img/color4.svg" alt="color4" />
-        <img src="/img/color5.svg" alt="color5" />
-        <img src="/img/color6.svg" alt="color6" />
-        <img src="/img/color7.svg" alt="color7" />
-      </div>
-    </section>
+    <ColoresExterior />
 
-    <section
-      class="bg-[url('/img/fondo-colores-int.svg')] bg-contain bg-no-repeat bg-bottom my-16 aspect-[1361/680]"
-    >
-      <h2 class="poppins-bold uppercase text-6xl text-right">
-        Colores interior
-      </h2>
-      <div>
-        <img src="/img/color-int1.png" alt="color" class="-mt-12" />
-      </div>
-      <div class="flex gap-4 justify-center mt-4">
-        <img src="/img/color1.svg" alt="color1" />
-        <img src="/img/color2.svg" alt="color2" />
-        <img src="/img/color3.svg" alt="color3" />
-        <img src="/img/color4.svg" alt="color4" />
-        <img src="/img/color5.svg" alt="color5" />
-        <img src="/img/color6.svg" alt="color6" />
-        <img src="/img/color7.svg" alt="color7" />
-      </div>
-    </section>
+    <ColoresInterior />
 
     <section
       class="my-16 bg-[url('/img/fondo-equip.svg')] bg-contain bg-no-repeat aspect-[1440/621]"
@@ -136,7 +100,7 @@ import Swiper from "../components/Swiper.astro";
           <p class="poppins-extrabold uppercase text-3xl">$ 29.990.000</p>
         </div>
         <a
-          href="#"
+          href="http://gacmotor.cl/content/uploads/ft-aion-y.pdf"
           class="block border border-neutral-400 rounded-full px-8 py-2 uppercase poppins-medium"
           >Descargar ficha técnica</a
         >
