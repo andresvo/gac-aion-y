@@ -6,6 +6,8 @@ import Exterior from "../components/Exterior.astro";
 import Swiper from "../components/Swiper.astro";
 import ColoresExterior from "../components/ColoresExterior.astro";
 import ColoresInterior from "../components/ColoresInterior.astro";
+import Equipamiento from "../components/Equipamiento.astro";
+import Seguridad from "../components/Seguridad.astro";
 ---
 
 <Layout title="GAC Aion Y">
@@ -43,49 +45,9 @@ import ColoresInterior from "../components/ColoresInterior.astro";
 
     <ColoresInterior />
 
-    <section
-      class="my-16 bg-[url('/img/fondo-equip.svg')] bg-contain bg-no-repeat aspect-[1440/621]"
-    >
-      <h2 class="col-span-7 poppins-bold uppercase text-6xl text-right">
-        EQUIPAMIENTO Y TECNOLOGÍA
-      </h2>
-      <div class="grid grid-cols-7 gap-16 mt-16 px-8">
-        <div class="col-span-3">
-          <img src="/img/equip1.png" alt="foto" />
-        </div>
-        <div class="col-span-4 flex items-center">
-          <p class="my-8">
-            El All New GAC Aion Y llega para redefinir la movilidad eléctrica.
-            Su completo equipamiento y sus avanzadas tecnologías, te invitan a
-            vivir una nueva era en el camino para que cada viaje se transforme
-            en una experiencia única.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Equipamiento />
 
-    <section
-      class="my-16 bg-[url('/img/fondo-seg.svg')] bg-contain bg-no-repeat aspect-[1440/621]"
-    >
-      <h2 class="poppins-bold uppercase text-6xl">Seguridad</h2>
-      <div class="grid grid-cols-7 gap-16 mt-16 px-8">
-        <div class="col-span-4 flex items-center">
-          <p class="my-8">
-            El All New GAC Aion Y eleva los estándares de seguridad con una
-            combinación de tecnología avanzada y sistemas de protección
-            innovadores. Equipado con airbags frontales, laterales y de cortina,
-            además del Programa Electrónico de Estabilidad (ESP) y frenos
-            antibloqueo (ABS), este modelo garantiza máxima protección en cada
-            trayecto. Su sistema de cámara de 360° HD y los sensores de
-            estacionamiento traseros aseguran una experiencia de conducción
-            segura y sin puntos ciegos en cualquier entorno.
-          </p>
-        </div>
-        <div class="col-span-3">
-          <img src="/img/seg1.png" alt="foto" />
-        </div>
-      </div>
-    </section>
+    <Seguridad />
 
     <section
       class="grid grid-cols-7 my-20 bg-[url('/img/fondo-cta.jpg')] bg-contain bg-no-repeat aspect-[1440/500]"

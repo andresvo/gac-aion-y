@@ -35,7 +35,7 @@
   }
 </script>
 
-<style is:global>
+<style lang="scss" is:global>
   .swiper-button-next,
   .swiper-button-prev {
     width: 38px;
@@ -65,17 +65,70 @@
   }
 
   /* Right swiper */
-  .rightSwiper .swiper-button-next,
-  .rightSwiper .swiper-button-prev {
-    top: 40%;
+  .rightSwiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 40%;
+    }
+    .swiper-button-prev {
+      right: 488px;
+      left: auto;
+    }
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      right: 0;
+      left: auto;
+      bottom: 103px;
+    }
   }
-  .rightSwiper .swiper-button-prev {
-    right: 488px;
-    left: auto;
+
+  /* Swiper negro */
+  .leftSwiper2,
+  .rightSwiper2 {
+    .swiper-button-next:after {
+      background-image: url("/img/flecha-der-n.svg");
+    }
+    .swiper-button-prev:after {
+      background-image: url("/img/flecha-izq-n.svg");
+    }
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      bottom: 32px;
+      width: 527px;
+    }
+    .swiper-pagination-bullet {
+      opacity: 1;
+      width: 6px;
+      height: 6px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #000000;
+      transform: scale(1.7);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: auto;
+      bottom: 24px;
+    }
   }
-  .rightSwiper.swiper-horizontal > .swiper-pagination-bullets {
-    right: 0;
-    left: auto;
-    bottom: 103px;
+  .leftSwiper2 {
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      right: 0;
+      left: auto;
+    }
+    .swiper-button-prev {
+      left: auto;
+      right: 436px;
+    }
+    .swiper-button-next {
+      right: 50px;
+    }
+  }
+  .rightSwiper2 {
+    .swiper-button-prev {
+      left: 50px;
+    }
+    .swiper-button-next {
+      right: auto;
+      left: 436px;
+    }
   }
 </style>
