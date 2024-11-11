@@ -1,6 +1,7 @@
 ---
 import GtmBody from "../components/GtmBody.astro";
 import GtmHead from "../components/GtmHead.astro";
+import MenuMovil from "../components/MenuMovil.astro";
 
 interface Props {
   title: string;
@@ -59,7 +60,7 @@ const { title } = Astro.props;
         <a href="#" class="hidden xl:block border rounded-full px-8 py-2"
           >Cotizar</a
         >
-        <img src="/img/menu.svg" alt="Menú" class="w-9 p-1 xl:hidden" />
+        <MenuMovil />
       </div>
     </header>
     <slot />
