@@ -1,0 +1,103 @@
+<img
+  src="/aion-y/img/menu.svg"
+  alt="Menú"
+  id="menu-open"
+  class="w-9 p-1 xl:hidden"
+/>
+<div data-v-a1d7761a="" class="menu-mobile container-fluid">
+  <div
+    data-v-a1d7761a=""
+    class="menu-mobile__row
+  row
+  mx-1
+  justify-content-between
+  align-items-center
+  py-4"
+  >
+    <div data-v-a1d7761a="" class="col-6 px-0 logo_mobile_cl">
+      <a data-v-a1d7761a="" href="/"
+        ><img
+          data-v-a1d7761a=""
+          src="https://gacmotor.cl/content/uploads/logo-gac-mt-mobile-1-e1712849512378.png"
+        /></a>
+    </div>
+    <div data-v-a1d7761a="" class="col-4 px-0 text-right">
+      <button data-v-a1d7761a=""
+        ><i data-v-a1d7761a="" class="icon material-icons color-01">close</i
+        ></button>
+    </div>
+  </div>
+  <div data-v-a1d7761a="" class="menu-mobile__content text-left">
+    <div data-v-a1d7761a="" class="menu-mobile__middle">
+      <a data-v-a1d7761a="" href="/" class="menu-link color-05">Inicio</a>
+      <a data-v-a1d7761a="" href="/modelos" class="menu-link color-05"
+        >Modelos</a
+      >
+      <button data-v-a1d7761a="" class="menu-link color-05"> Postventa </button>
+      <a
+        data-v-a1d7761a=""
+        href="/centro-de-ayuda/sucursales"
+        class="menu-link color-05">Concesionarios</a
+      >
+      <a data-v-a1d7761a="" href="/cotizador" class="menu-link color-05"
+        >Cotiza</a>
+    </div>
+    <div data-v-a1d7761a="" class="menu-mobile__bottom">
+      <a
+        data-v-a1d7761a=""
+        href="/conoce-gac-motor/"
+        class="menu-link color-05 f-400">Conoce GAC Motor</a
+      >
+      <a data-v-a1d7761a="" href="/novedades/" class="menu-link color-05">
+        Noticias Gac
+      </a>
+      <a
+        data-v-a1d7761a=""
+        href="/centro-de-ayuda"
+        class="menu-link color-05 f-400">Centro de Ayuda</a>
+    </div>
+    <div data-v-a1d7761a="" class="menu-mobile__icons">
+      <a
+        data-v-a1d7761a=""
+        target="_blank"
+        href="/facebook"
+        class="button-bg--circle-small"
+        ><i data-v-a1d7761a="" class="icon fab fa-facebook-f"></i></a
+      >
+      <a
+        data-v-a1d7761a=""
+        target="_blank"
+        href="/instagram"
+        class="button-bg--circle-small"
+        ><i data-v-a1d7761a="" class="icon fab fa-instagram"></i></a
+      >
+      <a
+        data-v-a1d7761a=""
+        target="_blank"
+        href="/youtube"
+        class="button-bg--circle-small"
+        ><i data-v-a1d7761a="" class="icon fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const menuOpen = document.getElementById("menu-open");
+  const menuClose = document.getElementById("menu-close");
+  const dropdown = document.getElementById("dropdown");
+
+  menuOpen.addEventListener("click", () => {
+    dropdown.classList.remove("hidden");
+  });
+
+  menuClose.addEventListener("click", () => {
+    dropdown.classList.add("hidden");
+  });
+
+  // Ocultar menú al hacer clic en un enlace
+  dropdown.querySelectorAll("a").forEach((anchor) => {
+    anchor.addEventListener("click", () => {
+      dropdown.classList.add("hidden");
+    });
+  });
+</script>

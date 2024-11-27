@@ -2,6 +2,7 @@
 import GtmBody from "../components/GtmBody.astro";
 import GtmHead from "../components/GtmHead.astro";
 import MenuGac from "../components/MenuGac.astro";
+import MenuGacMovil from "../components/MenuGacMovil.astro";
 import MenuMovil from "../components/MenuMovil.astro";
 
 interface Props {
@@ -50,8 +51,13 @@ const { title } = Astro.props;
     >
       <MenuGac />
       <div
-        class="flex justify-center pt-2 px-2 xl:pt-4 xl:px-4 uppercase poppins-medium"
+        class="flex justify-between xl:justify-center pt-2 px-2 xl:pt-4 xl:px-4 uppercase poppins-medium"
       >
+        <img
+          src="/aion-y/img/logo-gac.svg"
+          alt="GAC Motor"
+          class="xl:hidden w-36"
+        />
         <nav class="hidden xl:block">
           <ul
             class="flex gap-16 items-center justify-between text-sm text-center"
@@ -67,9 +73,10 @@ const { title } = Astro.props;
             <li><a href="#precios">Precios y<br />financiamiento</a></li>
           </ul>
         </nav>
-        <MenuMovil />
+        <MenuGacMovil />
       </div>
     </header>
+    <MenuMovil />
     <slot />
   </body>
 </html>
